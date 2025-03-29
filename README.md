@@ -114,8 +114,6 @@ Common Voice 11.10 is a large, open-source speech dataset released by Mozilla, d
 
 <!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
 
-- 
-
 #### Preprocessing [optional]
 
 - Resampling to 16kHz
