@@ -69,27 +69,34 @@ This model can be used a a strating point to further train on the rest of the Co
 
 Use the code below to get started with the model.
 
+
+```python
+from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
+from transformers import Trainer, TrainingArguments
+
+# Load the model and processor
 processor = Wav2Vec2Processor.from_pretrained('Tanaya25/ASR-Common_speech_11_10')
 model = Wav2Vec2ForCTC.from_pretrained('Tanaya25/ASR-Common_speech_11_10')
 
+# Set up the training arguments
 eval_args = TrainingArguments(
     output_dir="./output",  # Output directory for evaluation results
     per_device_eval_batch_size=8,  # Batch size for evaluation per device
     logging_dir='./logs',  # Directory for logging
     logging_steps=50,  # Log every 50 steps
     do_eval=True,  # Ensure evaluation occurs
-    run_name = "my_evaluation_run",
-    report_to="none"  # Add this to disable wandb reporting as this takes a lot of time
+    run_name="my_evaluation_run",
+    report_to="none"  # Add this to disable wandb reporting
 )
 
 trainer = Trainer(
     model=model,
-    data_collator=data_collator,  ## replace this with the collater in the code file or your custom collator
     args=eval_args,
-    processing_class=processor.feature_extractor,
-    compute_metrics=compute_metrics  # Add custom metrics
+    processor=processor.feature_extractor,
+    compute_metrics=compute_metrics  # Custom metrics function if needed
 )
 
+# Evaluate on test dataset
 results = trainer.evaluate(test_dataset)
 print(results)
 
