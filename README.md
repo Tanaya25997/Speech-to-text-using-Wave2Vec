@@ -266,17 +266,5 @@ Libraries: Hugging Face Transformers, PyTorch, Datasets
 Python Version: 3.8 or higher
 Operating System: Ubuntu 20.04
 
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the model, the APA and Bibtex information for that should go in this section. -->
-
-**BibTeX:**
-
-@inproceedings{baevski2020wav2vec,
-  title={Wav2Vec 2.0: A Framework for Self-Supervised Learning of Speech Representations},
-  author={Alexei Baevski and Henry Zhou and Abdelrahman Mohamed and Michael Auli},
-  booktitle={NeurIPS},
-  year={2020}
-}
 
 
