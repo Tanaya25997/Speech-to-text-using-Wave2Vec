@@ -165,14 +165,14 @@ Common Voice 11.10 is a large, open-source speech dataset released by Mozilla, d
 ### Testing Data, Factors & Metrics
 
 1. Data =  Val = 9487
-2. Metrics = WER (around 2.6 achieved)
+2. Metrics = WER (around 0.22 achieved)
    
 #### Testing Data
 
 <!-- This should link to a Dataset Card if possible. -->
 
 1. Data =  Test = 9488
-2. Metrics = WER (around 2.6 achieved)
+2. Metrics = WER (around 0.26 achieved)
 3. Time: around 10 minutes
 
 #### Factors
